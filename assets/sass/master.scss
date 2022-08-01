@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+// Brand colors
+$gray: #98AFBE;
+$orange: #FF7550;
+$yellow: #FFC747;
+$black: #121212;
+
+// Update
+$link: $orange;
+
+// Update some of Bulma's component variable
+$tabs-link-active-border-bottom-color: none;
+$tabs-link-color: $orange;
+$tabs-link-hover-color: $black;
+$tabs-toggle-link-radius: 0;
+$tabs-toggle-link-border-color: $black;
+$tabs-toggle-link-active-background-color: $orange;
+$tabs-toggle-link-active-border-color: none;
+$tabs-toggle-link-active-color: $black;
+$tabs-toggle-link-hover-background-color: $yellow;
+$tabs-toggle-link-hover-border-color: $black;
+
+@import "node_modules/bulma/bulma.sass";
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.is-line-height-1 {
+    line-height: 1;
+}
+
+.tab-contents {
+    max-height: 84vh;
+    overflow: auto;
+
+    @include touch {
+        max-height: fit-content;
+    }
+
+    /* Works on Firefox */
+    & {
+        scrollbar-width: thin;
+        scrollbar-color: $orange $black;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $orange;
+        border-radius: 20px;
+        border: 3px solid $black;
+    }
+}

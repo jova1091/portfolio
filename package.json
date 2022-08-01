@@ -1,0 +1,29 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url assets/sass/master.scss assets/css/master.css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jova1091/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "jova1091"
+  ],
+  "author": "Joan Preciado (jova1091)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jova1091/portfolio/issues"
+  },
+  "homepage": "https://github.com/jova1091/portfolio",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "node-sass": "^7.0.1"
+  }
+}
